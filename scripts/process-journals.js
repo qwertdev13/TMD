@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const BASE_PATH = "/TMD"; // add this at the top
 
 const JOURNAL_DIR = "./journals";
 const OUTPUT_DIR = "./public/journals";
@@ -47,12 +48,12 @@ for (const file of journalFiles) {
   const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
   fs.writeFileSync(
-    `${OUTPUT_DIR}/${slug}.html`,
+    `${OUTPUT_DIR}/${slug}.txt`,
     `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="${BASE_PATH}/styles.css">
 <title>${title}</title>
 </head>
 <body>
@@ -66,7 +67,7 @@ ${body.join("\n")}
 
   boxesHTML += `
 <div class="document-box">
-    <a href="/journals/${slug}.html">${title}</a> <br><br> ${description}
+    <a href="${BASE_PATH}/journals/${slug}.txt">${title}</a> <br><br> ${description}
 </div>
 `;
 }
