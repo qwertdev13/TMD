@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+const fs = require("fs");
+const path = require("path");
 
 const JOURNAL_DIR = "./journals";
 const OUTPUT_DIR = "./public/journals";
@@ -46,7 +46,6 @@ for (const file of journalFiles) {
 
   const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
-  // Write document page
   fs.writeFileSync(
     `${OUTPUT_DIR}/${slug}.html`,
     `<!DOCTYPE html>
@@ -65,7 +64,6 @@ ${body.join("\n")}
 </html>`
   );
 
-  // Document box (MATCHES your HTML exactly)
   boxesHTML += `
 <div class="document-box">
     <a href="/journals/${slug}.html">${title}</a> <br><br> ${description}
@@ -73,7 +71,6 @@ ${body.join("\n")}
 `;
 }
 
-// Inject into index.html
 let index = fs.readFileSync(INDEX_HTML, "utf8");
 
 index = index.replace(
