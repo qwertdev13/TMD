@@ -1,0 +1,59 @@
+body {
+    background-color: #000000;
+    color: #ffffff; /* Changed to white for better contrast */ 
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'JetBrains Mono Nerd Font', monospace;
+}
+@font-face {
+  font-family: 'JetBrains Mono Nerd Font';
+  src: url('fonts/JetBrainsMonoNerdFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}   
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #91b5f4; /* Changed to a brighter blue */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f0f0f0; /* Changed hover color to a light gray */
+}
+
+.document-section {
+    margin-top: 20px;
+}
+
+.document-box {
+    border: 2px solid rgb(255, 255, 255);
+     margin: 10px 0; 
+   padding: 15px; 
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    color: #91b5f4;
+}   
