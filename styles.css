@@ -44,13 +44,11 @@ a:hover {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
+    position:relative;
     width: 100%;
     text-align: center;
     font-size: 0.8em;
 }
-
 h1 {
     text-align: center;
     margin: 20px;
@@ -86,3 +84,31 @@ button {
 button:hover {
   background-color: #ff0000;
 }   
+input {
+    background-color: #000000;
+    text-align: left;
+    float: right;
+}
+.hidden {
+  display: none;
+}
+
+#searchForm {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  width: 300px;
+  float: right;
+}   
+#searchInput {
+    width: 100%;
+    float: right;
+    display: block;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+#searchBtn {
+    float: right;
+}
