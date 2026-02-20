@@ -44,8 +44,9 @@ a:hover {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
+  /*  position: absolute;
+    bottom: 0; */
+    margin-top: auto;
     width: 100%;
     text-align: center;
     font-size: 0.9em;
@@ -117,4 +118,14 @@ input {
 }
 header {
     background-color: #000000;
+}
+h3 {
+    margin: 50px;
+    padding: 0px;
+}
+.spcl {
+    width: 50%;
+} 
+hr {
+    width: 50%;
 }
